@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAY ELECTRICALS | Professional Electrical Installations, Repairs & Genuine Parts</title>
+
+<meta name="description" content="Professional electrical installations, repairs and electrical supplies in Kenya. Residential, commercial and industrial services.">
+<meta name="keywords" content="electrician Kenya, electrical installation, electrical repairs, electrical supplies, electrical contractor, house wiring Kenya">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Montserrat,sans-serif;
+scroll-behavior:smooth
+}
+
+body{
+background:#0f172a;
+color:#fff;
+line-height:1.6
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+width:100%;
+background:#0f172ae8;
+backdrop-filter:blur(10px);
+z-index:1000
+}
+
+nav{
+max-width:1200px;
+margin:auto;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:relative;
+}
+
+.logo{
+font-weight:800;
+color:#22d3ee;
+font-size:1.2rem;
+}
+
+/* NAV LINKS */
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+/* HAMBURGER */
+.hamburger{
+display:none;
+flex-direction:column;
+cursor:pointer;
+gap:5px;
+}
+
+.hamburger span{
+width:25px;
+height:3px;
+background:#fff;
+border-radius:3px;
+}
+
+/* MOBILE MENU */
+@media(max-width:768px){
+
+nav ul{
+position:absolute;
+top:70px;
+left:0;
+right:0;
+background:#0f172a;
+flex-direction:column;
+align-items:center;
+gap:15px;
+padding:20px 0;
+display:none;
+}
+
+nav ul.active{
+display:flex;
+}
+
+.hamburger{
+display:flex;
+}
+
+.hero h1{font-size:2rem}
+
+.contact{
+grid-template-columns:1fr;
+}
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1600&q=80') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero:before{
+content:'';
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.65)
+}
+
+.hero-content{
+position:relative;
+max-width:800px;
+padding:20px;
+}
+
+.hero h1{font-size:3rem}
+
+.btn{
+display:inline-block;
+padding:12px 24px;
+background:#22d3ee;
+color:#000;
+text-decoration:none;
+border-radius:6px;
+margin:8px;
+font-weight:700;
+}
+
+/* SECTIONS */
+.section{
+padding:90px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+h2{text-align:center;margin-bottom:25px}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:40px 20px;
+background:#111827
+}
+
+.stats div,.card,.testimonial,.faq-item{
+background:#1e293b;
+padding:20px;
+border-radius:10px
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:8px
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px
+}
+
+.testimonial{text-align:center}
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px
+}
+
+input,textarea,select{
+width:100%;
+padding:12px;
+margin-top:5px;
+background:#0f172a;
+color:white;
+border:1px solid #334155;
+border-radius:6px
+}
+
+button{
+padding:12px;
+border:none;
+background:#22d3ee;
+color:black;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer
+}
+
+iframe{
+width:100%;
+height:350px;
+border:0;
+border-radius:10px
+}
+
+footer{
+background:#020617;
+padding:30px;
+text-align:center
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+font-size:28px
+}
+
+.faq-answer{
+display:none;
+padding-top:10px;
+color:#cbd5e1
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">⚡ JAY ELECTRICALS</div>
+
+<!-- HAMBURGER -->
+<div class="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<ul id="menu">
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Professional Electrical Installations, Repairs & Genuine Parts</h1>
+<p>Residential, Commercial & Industrial Electrical Solutions. Certified electricians delivering safe, reliable and affordable services.</p>
+<a href="#contact" class="btn">Request a Quote</a>
+<a href="tel:+254700000000" class="btn">Call Now</a>
+</div>
+</section>
+
+<div class="stats">
+<div>✔ 10+ Years Experience</div>
+<div>✔ Licensed Technicians</div>
+<div>✔ 500+ Projects Completed</div>
+<div>✔ Emergency Support</div>
+</div>
+
+<section id="about" class="section">
+<h2>About Us</h2>
+<p>JAY ELECTRICALS provides professional electrical installations, maintenance, diagnostics, repairs and electrical supplies for homes, businesses and industries across Kenya.</p>
+</section>
+
+<section id="services" class="section">
+<h2>Our Services</h2>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=800&q=80">
+<h3>Electrical Installations</h3>
+<p>House wiring, commercial wiring, panels and industrial systems.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80">
+<h3>Repairs & Diagnostics</h3>
+<p>Fault detection, maintenance and emergency repairs.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1565608438257-fac3c27beb36?auto=format&fit=crop&w=800&q=80">
+<h3>Electrical Supplies</h3>
+<p>Genuine cables, breakers, switches and accessories.</p>
+</div>
+</div>
+</section>
+
+<section id="products" class="section">
+<h2>Products</h2>
+<div class="grid">
+<div class="card"><h3>Circuit Breakers</h3></div>
+<div class="card"><h3>LED Floodlights</h3></div>
+<div class="card"><h3>Electrical Cables</h3></div>
+<div class="card"><h3>Distribution Boards</h3></div>
+<div class="card"><h3>Sockets & Switches</h3></div>
+<div class="card"><h3>Solar Accessories</h3></div>
+</div>
+</section>
+
+<section class="section">
+<h2>Why Choose Us</h2>
+<div class="grid">
+<div class="card">Licensed Electricians</div>
+<div class="card">Genuine Parts</div>
+<div class="card">Fast Response</div>
+<div class="card">Affordable Pricing</div>
+<div class="card">Warranty Support</div>
+<div class="card">Professional Service</div>
+</div>
+</section>
+
+<section class="section gallery">
+<h2>Project Gallery</h2>
+<div class="grid">
+<img src="https://images.unsplash.com/photo-1555963153-11ff60182d08?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=800&q=80">
+</div>
+</section>
+
+<section class="section">
+<h2>Instant Quote Calculator</h2>
+<select id="service" onchange="calc()">
+<option value="5000">House Wiring</option>
+<option value="3000">Fault Diagnosis</option>
+<option value="15000">Solar Installation</option>
+<option value="10000">Commercial Electrical Work</option>
+</select>
+
+<h3 style="margin-top:20px">Starting From KES <span id="price">5000</span></h3>
+</section>
+
+<section class="section">
+<h2>Testimonials</h2>
+<div class="grid">
+<div class="testimonial">★★★★★<br>Excellent installation service.<br><b>John Mwangi</b></div>
+<div class="testimonial">★★★★★<br>Fast fault diagnosis and repair.<br><b>Grace Wanjiku</b></div>
+<div class="testimonial">★★★★★<br>Affordable prices and genuine products.<br><b>Peter Njoroge</b></div>
+</div>
+</section>
+
+<section id="contact" class="section">
+<h2>Contact Us</h2>
+<div class="contact">
+<div>
+<p>📞 +254 7XX XXX XXX</p>
+<p>💬 WhatsApp: +254 7XX XXX XXX</p>
+<p>📧 info@jayelectricals.co.ke</p>
+<p>📍 Nairobi, Kenya</p>
+<p>🕒 Mon-Sat: 8:00 AM - 6:00 PM</p>
+</div>
+
+<div>
+<form>
+<input placeholder="Your Name">
+<input placeholder="Email">
+<textarea placeholder="Message"></textarea>
+<button>Send Inquiry</button>
+</form>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Our Location</h2>
+<iframe src="https://maps.google.com/maps?q=Nairobi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<footer>
+<p>© 2026 JAY ELECTRICALS. All Rights Reserved.</p>
+</footer>
+
+<a href="https://wa.me/254700000000" class="whatsapp">💬</a>
+
+<script>
+function calc(){
+document.getElementById('price').innerText =
+document.getElementById('service').value;
+}
+
+function toggleFaq(el){
+let a = el.querySelector('.faq-answer');
+a.style.display = a.style.display === 'block' ? 'none' : 'block';
+}
+
+function toggleMenu(){
+document.getElementById('menu').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
