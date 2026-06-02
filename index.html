@@ -400,11 +400,11 @@ width:auto;
 </div>
 
 <div>
-<form>
-<input placeholder="Your Name">
-<input placeholder="Email">
-<textarea placeholder="Message"></textarea>
-<button>Send Inquiry</button>
+<form id="contact-form">
+    <input type="text" name="from_name" placeholder="Your Name" required>
+    <input type="email" name="from_email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message" required></textarea>
+    <button type="submit">Send Inquiry</button>
 </form>
 </div>
 </div>
@@ -435,6 +435,28 @@ a.style.display = a.style.display === 'block' ? 'none' : 'block';
 function toggleMenu(){
 document.getElementById('menu').classList.toggle('active');
 }
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("pM-Gs5oEssYqFNp_a");
+
+document.getElementById("contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_qoe30wj",
+        "template_fn5jz6f",
+        this
+    ).then(() => {
+        alert("Message sent successfully!");
+        this.reset();
+    }, (error) => {
+        alert("Failed to send message");
+        console.log(error);
+    });
+});
+</script>
 </script>
 
 </body>
